@@ -25,8 +25,8 @@ def generator_script(subject,long,creativity,api_key):
     title_chain = title_template | model
     video_chain = video_template | model
 
-    title = title_chain.invoke({"subject":subject}).content
-    video = video_chain.invoke({"title":title, "long":long}).content
+    title = title_chain.invoke({"subject": subject}).content
+    video = video_chain.invoke({"title": title, "long": long}).content
 
     return title,video
 
